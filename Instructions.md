@@ -20,13 +20,11 @@ Nous savons que l'API HTML audio et vidéo fournis d'ores et déjà un lecteur p
 
 Avec l'aide de javascript nous voulons pouvoir gérer ces 'controls' à la place d'HTML, et fournir d'autres fonctionnalités supplémentaires que nous allons développer.
 
-Les premières instructions sont sous forme de commentaires dans le fichier audio pour pouvoir correctement démarrer.
+Les premières instructions sont sous forme de commentaires dans le fichier html du dossier starter-v2, pour pouvoir correctement démarrer.
 
 ( Attention tous les formats de fichiers audios et videos ne sont pas forcément lisible dans tous les navigateurs.)
 
 [Suite des instructions ...]
-
-----------------------------
 
 ## La partie design - CSS
 
@@ -37,8 +35,6 @@ C'est pourquoi nous utiliserons le CSS bien-sûr ainsi que le framework bootstra
 Une image du design que j'ai développer pour mon projet. 
 
 [En cours d'élaboration]
-
-----------------------------
 
 # Ressources
 
