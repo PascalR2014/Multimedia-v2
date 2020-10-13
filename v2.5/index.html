@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--CSS file here-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--CSS leanbackPlayer file here-->
+	<link rel="stylesheet" type="text/css" href="css/leanbackPlayer.default.css">
+	<!--Javascript file link here-->
+	<script type="text/javascript" src="js/player.js"></script>
+	<!--Js leanbackPlayer file here-->
+	<script type="text/javascript" src="js/leanbackPlayer.fr.js"></script>
+	<!--bootstrap link here official CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Mon player</title>
+</head>
+<body>
+<!--
+Information DOM interface - dom/interfaces/html/nsIDOMHTMLMediaElement.idl
+
+The basis for the nsIDOMHTMLAudioElement and nsIDOMHTMLVideoElement interfaces, 
+which in turn implement the <audio> and <video> HTML5 elements. 
+
+Info code
+La première ligne récupère le premier élément video dans le document,
+et la seconde appelle la méthode play() de l'élément, telle que définie 
+dans l'interface nsIDOMHTMLMediaElement utilisée pour implémenter les éléments de média
+-->
+
+<!-- Les bouton ne fonctionne pas il faut trouver le moyen de l'afficher !!  source https://www.flaticon.com/packs/multimedia-player-control-2?word=player%20button -->
+	<!-- Partie vidéo -->
+		<div class="media-player">
+			<!-- Essai sans controls ne fonctionne pas !!
+			<video id="media-video" controls>  -->
+			<video id="media-video">
+				<source src="foo.ogg" type="video/ogg">
+				<source src="foo.mp4" type="video/mp4">
+				<source src="multimedia/Nationalhymne Deutschland (Deutschlandlied) - National Anthem.webm" type="video/webm">
+				  <!-- Track tag - Pour ajouter des sous-titres ou des légendes -->
+				<track kind="subtitles" label="FR" src="" srclang="fr" type="text/vtt" default>
+			  	Votre navigateur ne gère pas votre fichier<code>video</code>.
+			</video>
+			<div id="media-controls">
+				<button id="replay-button" class="replay" title="replay" onclick="replayMedia();">Replay</button>
+				<button id="play-pause-button" class="play" title="play" onclick="basculePlayPause();">Play/Pause</button>
+				<button id="stop-button" class="stop" title="stop" onclick="stopPlayer();">Stop</button>
+				<progress id="progress-bar" min="0" max="100" value="0">progress</progress>
+				<button id="volume-inc-button" class="volume-up" title="monte le volume" onclick="changeVolume('+');">up</button>
+				<button id="volume-dec-button" class="volume-down" title="descend le volume" onclick="changeVolume('-');">down</button>
+				<button id="mute-button" class="mute" title="mute" onclick="basculeMute('true');">mute</button>
+			</div>
+		</div>
+	
+		<br>
+	<!-- Partie audio -->
+	
+	<br>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <p>Coding by PashCodeur 2020</p>
+</body>
+</html> 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--CSS file here-->
+	<link rel="stylesheet" type="text/css" href="css/Sample.css">
+	<!--Javascript file link here-->
+	<script type="text/javascript" src="js/SampleScript.js" defer></script>
+	<!--Deux atributs HTML premettent de modifier le comportementdes balises script 'async' charger les scripts de façon asynchrone et 'defer' permet lui de différer l'éxécution à la fin du chargement du document.-->
+	<!--bootstrap link here official CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Audio & Vidéo</title>
+</head>
+<body>
+	<h1>Bienvenue sur le projet multimedia 2</h1>
+	<br>
+	<h3>Lecteur audio</h3>
+	<br>
+	<div id="audio-media">
+		<audio id="audio" src="multimedia/Pharrell Williams - Happy (Official Music Video).mp3" type="audio/mp3">
+			<!-- Removing controls attribute from the native html audio element 
+			New controls are standard input elements in a separate div-->
+			 <p>HTML5 audio is not supported on your browser</p>
+		</audio>
+		<br>
+		<div id="audioControls">
+		    <input type="button" value="Play" id="play"/>
+		    <input type="range" id="audioSeek"/>
+		    <span id="duration"></span>
+		    <input type="button" id="mute" value="Mute"/>
+		    <input type="range" id="volume" min="0" max="1" step="any"/>
+		</div>
+		<!--  Sélection d'un autre fichier via Javascript-->
+		<div>
+			<input type="button" value="Next" id="next"/>
+		</div>
+		<br>
+		<p>Lecteur audio v2.0</p>
+		<!-- Ajout d'un bouton reload possible ! -->
+	</div>
+	<br>
+	<h3>Lecteur video</h3>
+	<br>
+	<div id="video-media">
+		<video id="video" src="multimedia/Nationalhymne Deutschland (Deutschlandlied) - National Anthem.webm" 
+	        poster="" width="852" height="480" type=video/webm>
+	        <!--Removing controls attribute from the native html audio element-->
+		    <p>HTML5 video is not supported on your browser</p>
+	 	</video>
+	 	<br>
+	 	<div id="videoControls">
+		    <input type="button" value="Play" id="playVideo"/>
+		    <input type="range" id="videoSeek"/>
+		    <span id="durationVideo"></span>
+		    <input type="button" id="muteVideo" value="Mute"/>
+		    <input type="range" id="volumeVideo" min="0" max="1" step="any"/>
+		</div>
+		<br>
+	 	<p>Lecteur video v2.0</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<!-- L'utilisateur choisit les fichiers multimédia sur son ordinateur -->
+	<div class="jumbotron">
+		<h5 class="display-2">Choose media file</h5>
+		<label for="searcher"></label>
+		<input id="searcher" multiple type="file" name="multimedia" accept=".mp3, .ogg, .mp4, .avi, .webm">
+		<!-- Attribut accept permet de sélectionner seulement les fichiers souhaités. -->
+		<hr class="my-4">
+		<p>Utilitaire de recherche de fichiers audio ou vidéo version 1.0</p>
+		<!-- A développer avec un lecteur intégrer - de façon drag and drop ? 
+			Développer des fonctions remplaçant controls avec javascript ici pour l'audio et la video !-->
+		<!-- Voir dossier Projets-thématiques => html-CSS-Js => controls-javascript-html ... -->
+	</div>
+	<br>
+    <p>Multimedia.v2-project by PashCodeur 2020</p>
+</body>
+</html> 
