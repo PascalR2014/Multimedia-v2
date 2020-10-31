@@ -10,6 +10,10 @@ Ce projet est fournis en version template et sera implémenter au fur et à mesu
 
 Voir fichier instructions.md, pour suivre les étapes du projet.
 
+**Visuel du projet**
+
+<img src="https://github.com/PascalR2014/Multimedia-v2/blob/multimedia-v2.5.png" alt="Visuel du projet multimédia 2"/>
+
 Il est recommandé d'apprendre les bases de ces technologies avant d'en modifier le code source.
 
 ## Installation
